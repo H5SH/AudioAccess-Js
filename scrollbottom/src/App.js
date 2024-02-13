@@ -1,16 +1,16 @@
 import './App.css';
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import defaultSound from './components/defaultSound';
 import listensAudio from './components/listensAudio';
 import differentLibraries from './components/differentLibrariesForMultipleAdio';
 import userEvent from '@testing-library/user-event';
 import { fireEvent } from '@testing-library/react';
 
+
 function App() {
 
   const array = []
   let value = 0
-
 
   
   while(true){
@@ -32,8 +32,10 @@ function App() {
     })
     
     div.scrollTo(0, div.scrollHeight)
-    PlaySound()
-    
+    if (document.visibilityState !== "visible"){
+      PlaySound()
+    }
+  
     // const link = document.getElementById('change')
     // const head = document.getElementById('head')
     // console.log(link)
@@ -56,7 +58,7 @@ function App() {
     // const soundobj = new MediaRecorder()
     // const sound = document.getElementById("sound")
     // sound.play()
-    const sound = new Audio(require("./score.wav"))
+    const sound = new Audio(require("./paddle_hit.wav"))
     // sound.src = 'score.wav'
     // sound.preload = 'metadata'
     // sound.src = 'C:/H5SH/Other Projects/React-Scroll-Bottom/scrollbottom/src/score.wav'
@@ -71,7 +73,7 @@ function App() {
   },7000)
 
   useEffect(()=>{
-    incriment()
+    // incriment()
   },[])
 
 
@@ -80,7 +82,17 @@ function App() {
 
   return (
     <div id='body'>
-     <div style={{width: '50%', height: '500px', overflow: 'scroll', marginLeft: '20%', marginTop: '10%'}} id='1' className="App">
+     <div 
+     style={{
+      width: '50%', 
+      height: '500px', 
+      overflow: 'scroll', 
+      marginLeft: '20%', 
+      marginTop: '10%'
+      }} 
+      id='1' 
+      className="App"
+       >
       <ul id='ul'>
 
       </ul>
