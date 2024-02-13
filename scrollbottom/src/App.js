@@ -56,10 +56,12 @@ function App() {
     // const soundobj = new MediaRecorder()
     // const sound = document.getElementById("sound")
     // sound.play()
-    // const sound = new Audio()
+    const sound = new Audio(require("./score.wav"))
+    // sound.src = 'score.wav'
+    // sound.preload = 'metadata'
     // sound.src = 'C:/H5SH/Other Projects/React-Scroll-Bottom/scrollbottom/src/score.wav'
     // sound.play()
-    differentLibraries()
+    differentLibraries(sound)
     
   }
 
@@ -84,9 +86,9 @@ function App() {
       </ul>
       
     </div>
-    <audio muted={true} id='sound'>
+    {/*<audio muted={true} id='sound'>
       <source src='score.wav' />
-    </audio>
+  </audio>*/}
     {/* <embed src='score.wav' autoStart="false" width='0' height="0" id='sound' muted={true}></embed>/ */}
      {/* <button onClick={incriment}>Change Icon</button>  */}
     </div>
