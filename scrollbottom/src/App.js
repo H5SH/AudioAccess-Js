@@ -11,6 +11,7 @@ function App() {
   const array = []
   let value = 0
 
+
   
   while(true){
     if(value === 10){
@@ -58,8 +59,8 @@ function App() {
     // const sound = new Audio()
     // sound.src = 'C:/H5SH/Other Projects/React-Scroll-Bottom/scrollbottom/src/score.wav'
     // sound.play()
-    
     differentLibraries()
+    
   }
 
 
